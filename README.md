@@ -1,6 +1,5 @@
-![ObjectBuildRLogo](./ObjectBuildR.png | width=20)
-# ObjectBuildR
-> Bringing you closer to neat builders without the hassle
+# ObjectBuildR <img src="./ObjectBuildR.png" height="30" width="30" >
+> Bringing you closer to neat builders without the hassle.
 >This project aims at helping you get the [Builder Pattern](https://en.wikipedia.org/wiki/Builder_pattern) going without you writing the boilerplate code.
 
 
