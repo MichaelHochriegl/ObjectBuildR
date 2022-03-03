@@ -1,3 +1,5 @@
+[![GitHub Workflow](https://github.com/MichaelHochriegl/ObjectBuildR/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/MichaelHochriegl/ObjectBuildR/actions/workflows/build-and-test.yml)
+[![GitHub issues](https://img.shields.io/github/issues/michaelhochriegl/objectbuildr)](https://github.com/MichaelHochriegl/ObjectBuildR/issues)
 # ObjectBuildR <img src="./ObjectBuildR.png" height="30" width="30" >
 > Bringing you closer to neat builders without the hassle.
 >This project aims at helping you get the [Builder Pattern](https://en.wikipedia.org/wiki/Builder_pattern) going without you writing the boilerplate code.
