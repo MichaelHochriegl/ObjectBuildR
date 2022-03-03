@@ -1,10 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
+        <TargetFramework>net6.0</TargetFramework>
         <IncludeBuildOutput>false</IncludeBuildOutput>
+        <!-- 👇 New project, why not! -->
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>true</ImplicitUsings>
         <LangVersion>Latest</LangVersion>
     </PropertyGroup>
 

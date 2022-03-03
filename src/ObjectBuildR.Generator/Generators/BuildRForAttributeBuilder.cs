@@ -12,21 +12,21 @@ internal static class BuildRForAttributeBuilder
     internal static ClassBuilder BuildBuildRForAttribute()
     {
         var typeType = typeof(Type);
-        
+
         var builder = CodeBuilder.Create("ObjectBuildR")
             .AddClass("BuildRForAttribute")
             .AddAttribute("AttributeUsage(AttributeTargets.Class)")
-            .AddInterface("Attribute")
+            .SetBaseClass("Attribute")
             .AddProperty("Type", Accessibility.Public)
             .SetType(typeType)
-            .UseGetOnlyAutoProp()
-            .AddConstructor(Accessibility.Public)
-            .AddParameter("Type", "type")
-            .WithBody(w =>
-            {
-                w.AppendLine("Type = type;");
-            })
-            .Class;
+            .UseAutoProps();
+            // .AddConstructor(Accessibility.Public)
+            // .AddParameter("Type", "type")
+            // .WithBody(w =>
+            // {
+            //     w.AppendLine("Type = type;");
+            // })
+            // .Class;
 
         return builder;
     }

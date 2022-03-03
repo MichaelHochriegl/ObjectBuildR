@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectBuildR.Generator", "s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectBuildR.Generator.Tests", "test\ObjectBuildR.Generator.Tests\ObjectBuildR.Generator.Tests.csproj", "{88CE1DBC-8457-4E57-A881-F3279CE0EF34}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectBuildR.Sample", "src\ObjectBuildR.Sample\ObjectBuildR.Sample.csproj", "{5E21178F-F8E9-4FD5-9129-8B86DC5B4DDE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,6 +18,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{52D8ED79-C276-455E-B4A9-D408F761AF4C} = {5A1165F6-7AA6-4D45-B0B0-B07FAB703744}
 		{88CE1DBC-8457-4E57-A881-F3279CE0EF34} = {62545DFC-B611-4ADC-B41B-D695A767E6C6}
+		{5E21178F-F8E9-4FD5-9129-8B86DC5B4DDE} = {5A1165F6-7AA6-4D45-B0B0-B07FAB703744}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{52D8ED79-C276-455E-B4A9-D408F761AF4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -26,5 +29,9 @@ Global
 		{88CE1DBC-8457-4E57-A881-F3279CE0EF34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88CE1DBC-8457-4E57-A881-F3279CE0EF34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88CE1DBC-8457-4E57-A881-F3279CE0EF34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E21178F-F8E9-4FD5-9129-8B86DC5B4DDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E21178F-F8E9-4FD5-9129-8B86DC5B4DDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E21178F-F8E9-4FD5-9129-8B86DC5B4DDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E21178F-F8E9-4FD5-9129-8B86DC5B4DDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

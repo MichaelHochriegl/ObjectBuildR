@@ -8,7 +8,7 @@ internal static class BuildRBaseBuilder
     internal static ClassBuilder BuildBuilRBase()
     {
         var builder = CodeBuilder.Create("ObjectBuildR")
-            .AddClass("ObjectBuildRBase")
+            .AddClass("BuildRBase")
             .MakePublicClass()
             .Abstract()
             .AddNamespaceImport("System")
@@ -22,7 +22,7 @@ internal static class BuildRBaseBuilder
             // .WithBody(w => w.AppendLine("return T"))
             .Class
             .AddMethod("WithObject", Accessibility.Public)
-            .WithReturnType("ObjectBuildRBase<T>")
+            .WithReturnType("BuildRBase<T>")
             .AddParameter("T", "value")
             .WithBody(w =>
             {
