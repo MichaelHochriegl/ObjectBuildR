@@ -12,7 +12,6 @@ body:
       label: Feature description
       description: Please provide a clear and concise description of what the feature is about.
       placeholder: Describe your feature!
-      required: true
   - type: checkboxes
     id: pr
     attributes:
