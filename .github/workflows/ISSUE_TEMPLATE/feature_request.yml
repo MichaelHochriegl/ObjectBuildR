@@ -1,0 +1,22 @@
+name: Feature request
+description: Suggest an idea for this project
+labels: [triage, enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this feature request for ObjectBuildR. Note that this template is only for feature requests. Please use [Github Dicussions](https://github.com/MichaelHochriegl/ObjectBuildR/discussions) for any questions.
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Feature description
+      description: Please provide a clear and concise description of what the feature is about.
+      placeholder: Describe your feature!
+      required: true
+  - type: checkboxes
+    id: pr
+    attributes:
+      label: Pull Request
+      description: Are you interested in implementing the feature via a Pull Request? That would be the fastest way to realize your request. We appreciate every contribution!
+      options:
+        - label: I would like to do a Pull Request

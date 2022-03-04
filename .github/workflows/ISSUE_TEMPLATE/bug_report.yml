@@ -1,0 +1,22 @@
+name: Bug request
+description: Report a problem you encountered
+labels: [triage, bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report for ObjectBuildR. Note that this template is only for bug reports. Please use [Github Dicussions](https://github.com/MichaelHochriegl/ObjectBuildR/discussions) for any questions.
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug description
+      description: Please provide a clear and concise description of what the bug is about.
+      placeholder: Describe the bug!
+      required: true
+  - type: checkboxes
+    id: pr
+    attributes:
+      label: Pull Request
+      description: Are you interested in implementing the feature via a Pull Request? That would be the fastest way to realize your request. We appreciate every contribution!
+      options:
+        - label: I would like to do a Pull Request
