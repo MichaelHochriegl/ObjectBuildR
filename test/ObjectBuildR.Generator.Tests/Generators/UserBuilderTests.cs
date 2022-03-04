@@ -1,7 +1,7 @@
 namespace ObjectBuildR.Generator.Tests.Generators;
 
 [UsesVerify]
-public class BuilderTests
+public class UserBuilderTests
 {
     [Fact]
     public Task Should_Generate_UserBuilder()
@@ -22,4 +22,6 @@ public partial class UserBuilder : BuildRBase<User>
 
         return TestHelper.Verify(source);
     }
+    
+    
 }
