@@ -105,7 +105,7 @@ internal static class BuildRBuilder
             });
             
         builder.AddMethod($"With{propertyName}", Accessibility.Public)
-            .AddParameter(propertyType, "value")
+            .AddParameter($"{propertyType}", "value")
             .WithReturnType(builderName)
             .WithBody(w => 
                 w.AppendLine($"return With{propertyName}(() => value);"));
