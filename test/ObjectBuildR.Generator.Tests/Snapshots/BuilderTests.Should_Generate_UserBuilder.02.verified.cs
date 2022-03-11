@@ -29,7 +29,7 @@ namespace Testing
             return this;
         }
 
-        public UserBuilder WithFirstName(String value)
+        public UserBuilder WithFirstName(string value)
         {
             return WithFirstName(() => value);
         }
@@ -40,7 +40,7 @@ namespace Testing
             return this;
         }
 
-        public UserBuilder WithLastName(String value)
+        public UserBuilder WithLastName(string value)
         {
             return WithLastName(() => value);
         }
