@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using ObjectBuildR.Generator.IntegrationTests.Entities.Movie;
 
 namespace ObjectBuildR.Generator.IntegrationTests.Builders;
@@ -11,7 +12,7 @@ public partial class MovieBuilder
     {
         var builder = new MovieBuilder()
             .WithName("The Big Lebowski")
-            .WithReleaseDate(DateTime.Parse("15.02.1998"))
+            .WithReleaseDate(DateTime.Parse("15.02.1998", new CultureInfo("de")))
             .WithVideoStream(() => VideoStreamBuilder.Simple().Build())
             .WithAudioStreams(() => new List<AudioStream>{AudioStreamBuilder.Simple().Build()});
     
