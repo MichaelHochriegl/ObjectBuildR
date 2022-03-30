@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using FluentAssertions;
 using ObjectBuildR.Generator.IntegrationTests.Builders;
 using ObjectBuildR.Generator.IntegrationTests.Entities.Movie;
@@ -32,7 +33,7 @@ public class MovieBuilderTests
         var expectedMovie = new Movie
         {
             Name = "The Big Lebowski",
-            ReleaseDate = DateTime.Parse("15.02.1998"),
+            ReleaseDate = DateTime.Parse("15.02.1998", new CultureInfo("de")),
             VideoStream = videoStream,
             AudioStreams = audioStreams
         };
