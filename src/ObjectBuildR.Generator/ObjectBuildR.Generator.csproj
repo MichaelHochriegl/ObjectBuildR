@@ -3,10 +3,9 @@
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <IncludeBuildOutput>false</IncludeBuildOutput>
-        <!-- 👇 New project, why not! -->
         <Nullable>enable</Nullable>
         <ImplicitUsings>true</ImplicitUsings>
-        <LangVersion>Latest</LangVersion>
+        <LangVersion>Latest</LangVersion>        
     </PropertyGroup>
 
     <ItemGroup>
@@ -17,5 +16,10 @@
     <ItemGroup>
         <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
     </ItemGroup>
-    
+
+    <ItemGroup>
+        <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true"
+              PackagePath="analyzers/dotnet/cs" Visible="false" />
+    </ItemGroup>
+
 </Project>
