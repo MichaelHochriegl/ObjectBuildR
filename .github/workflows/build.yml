@@ -42,11 +42,12 @@ jobs:
         if: matrix.os == 'ubuntu-latest'
         run: |
           arrTag=(${GITHUB_REF//\// })
-          VERSION="${arrTag[2]}"
+          VERSION=${GITHUB_REF#refs/tags/}
           echo Version: $VERSION
-          VERSION="${VERSION//v}"
+          VERSION="${VERSION#v}"
           echo Clean Version: $VERSION
           YOLO_VERSION="${VERSION}-${GITHUB_RUN_ID}"
+          echo YOLO_Version: $YOLO_VERSION
           dotnet pack -v normal -c Release --no-restore --include-symbols --include-source -p:PackageVersion=$YOLO_VERSION src/$PROJECT_NAME/$PROJECT_NAME.*proj --output ./artifacts
       - name: Build Local Nuget Config
         run: dotnet nuget add source ./artifacts -n local-packages --configfile nuget.integration-tests.config
