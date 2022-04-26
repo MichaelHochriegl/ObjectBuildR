@@ -26,7 +26,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="ObjectBuildR.Generator" Version="1.0.0-alpha" />
+        <PackageReference Include="ObjectBuildR.Generator" />
     </ItemGroup>
 
     <ItemGroup>
