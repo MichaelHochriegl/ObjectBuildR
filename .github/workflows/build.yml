@@ -44,8 +44,6 @@ jobs:
           YOLO_VERSION="0.0.0-${GITHUB_RUN_ID}"
           echo YOLO_Version: $YOLO_VERSION
           dotnet pack -v normal -c Release --no-restore --include-symbols --include-source -p:PackageVersion=$YOLO_VERSION src/$PROJECT_NAME/$PROJECT_NAME.*proj --output ./artifacts
-      - name: Build Local Nuget Config
-        run: dotnet nuget add source ./artifacts -n local-packages --configfile nuget.integration-tests.config
       - name: Restore Nuget Integration Test Project
         run: dotnet restore ./test/ObjectBuildR.Generator.NugetIntegrationTests --packages ./packages --configfile "nuget.integration-tests.config"
       - name: Build Nuget Integration Test Project
