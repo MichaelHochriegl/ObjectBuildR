@@ -45,10 +45,13 @@ jobs:
           echo YOLO_Version: $YOLO_VERSION
           dotnet pack -v normal -c Release --no-restore --include-symbols --include-source -p:PackageVersion=$YOLO_VERSION src/$PROJECT_NAME/$PROJECT_NAME.*proj --output ./artifacts
       - name: Restore Nuget Integration Test Project
+        if: matrix.os == 'ubuntu-latest'
         run: dotnet restore ./test/ObjectBuildR.Generator.NugetIntegrationTests --packages ./packages --configfile "nuget.integration-tests.config"
       - name: Build Nuget Integration Test Project
+        if: matrix.os == 'ubuntu-latest'
         run: dotnet build ./test/ObjectBuildR.Generator.NugetIntegrationTests -c Release --packages ./packages --no-restore
       - name: Test Nuget Integration Test Project
+        if: matrix.os == 'ubuntu-latest'
         run: dotnet test ./test/ObjectBuildR.Generator.NugetIntegrationTests -c Release --no-build --no-restore
       - name: Upload Artifact
         if: matrix.os == 'ubuntu-latest'
