@@ -13,7 +13,8 @@ env:
   # Project name to pack and publish
   PROJECT_NAME: ObjectBuildR.Generator
   # Version for Nuget-Package
-  VERSION: ${GITHUB_REF#refs/tags/#v}
+  DIRTY_VERSION: ${GITHUB_REF#refs/tags/}
+  VERSION: "${VERSION#v}"
   # GitHub Packages Feed settings
   GITHUB_FEED: https://nuget.pkg.github.com/giraffe-fsharp/
   GITHUB_USER: MichaelHochriegl
@@ -45,9 +46,9 @@ jobs:
         run: | 
           echo $VERSION
           echo $GITHUB_RUN_ID
-          PREVERSION=$VERSION.$GITHUB_RUN_ID
-          echo $PREVERSION
-          dotnet pack -v normal -c Release --no-restore --include-symbols --include-source -p:PackageVersion=$GITHUB_RUN_ID src/$PROJECT_NAME/$PROJECT_NAME.*proj --output ./artifacts
+          PRE_VERSION=$VERSION.$GITHUB_RUN_ID
+          echo $PRE_VERSION
+          dotnet pack -v normal -c Release --no-restore --include-symbols --include-source -p:PackageVersion=$PRE_VERSION src/$PROJECT_NAME/$PROJECT_NAME.*proj --output ./artifacts
       - name: Build Local Nuget Config
         run: dotnet nuget add source ./artifacts -n local-packages --configfile nuget.integration-tests.config
       - name: Restore Nuget Integration Test Project
