@@ -41,7 +41,7 @@ jobs:
       - name: Pack
         if: matrix.os == 'ubuntu-latest'
         run: |
-          YOLO_VERSION="0.0.0-${GITHUB_RUN_ID}"
+          YOLO_VERSION="${GITHUB_RUN_ID}.0.0"
           echo YOLO_Version: $YOLO_VERSION
           dotnet pack -v normal -c Release --no-restore --include-symbols --include-source -p:PackageVersion=$YOLO_VERSION src/$PROJECT_NAME/$PROJECT_NAME.*proj --output ./artifacts
       - name: Restore Nuget Integration Test Project
