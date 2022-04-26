@@ -14,7 +14,7 @@ env:
   PROJECT_NAME: ObjectBuildR.Generator
   # Version for Nuget-Package
   DIRTY_VERSION: ${GITHUB_REF#refs/tags/}
-  VERSION: "${VERSION#v}"
+  VERSION: ${VERSION#v}
   # GitHub Packages Feed settings
   GITHUB_FEED: https://nuget.pkg.github.com/giraffe-fsharp/
   GITHUB_USER: MichaelHochriegl
