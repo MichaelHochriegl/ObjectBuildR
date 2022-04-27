@@ -73,6 +73,7 @@ jobs:
           dotnet nuget add source --username MichaelHochriegl --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/MichaelHochriegl/index.json"
           for f in ./nupkg/*.nupkg
           do
+            echo $f
             dotnet nuget push $f --api-key ${{ secrets.GH_PACKAGES_PUBLISH_TOKEN }} --source "github"
           done
   deploy:
