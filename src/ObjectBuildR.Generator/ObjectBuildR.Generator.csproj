@@ -5,7 +5,8 @@
         <IncludeBuildOutput>false</IncludeBuildOutput>
         <Nullable>enable</Nullable>
         <ImplicitUsings>true</ImplicitUsings>
-        <LangVersion>Latest</LangVersion>        
+        <LangVersion>Latest</LangVersion>
+        <RepositoryUrl>https://github.com/MichaelHochriegl/ObjectBuildR</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>
